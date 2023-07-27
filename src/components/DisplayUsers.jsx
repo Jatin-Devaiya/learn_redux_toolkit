@@ -9,10 +9,11 @@ console.log(data,"data");
   return data.map((datas, index) => {
     return (
       <div key={index}>
-        <ol>
+        
           <span>{index+1}</span>
           <li>{datas}</li>
-        </ol>
+          <img src="delete.png" alt="delete ing" className="h-6"/>
+       
       </div>
     );
   });

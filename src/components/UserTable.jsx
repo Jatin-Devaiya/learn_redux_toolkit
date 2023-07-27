@@ -24,7 +24,7 @@ const UserTable = () => {
         </button>
         <ul>
          <DisplayUsers/>
-        </ul>
+        </ul><br />
         <hr />
         <DelateAllUser />
       </center>
