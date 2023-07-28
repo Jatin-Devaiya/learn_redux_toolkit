@@ -1,19 +1,33 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { removerUser } from "../store/slice/UserSlice";
 
 const DisplayUsers = () => {
   const data = useSelector((state) => {
     return state.users;
   });
-console.log(data,"data");
+  const dispatch = useDispatch();
+
+  const removesingleuser = (index) => {
+    dispatch(removerUser(index));
+  };
+  // console.log(data,"data");
   return data.map((datas, index) => {
     return (
-      <div key={index}>
-        
-          <span>{index+1}</span>
-          <li>{datas}</li>
-          <img src="delete.png" alt="delete ing" className="h-6"/>
-       
+      <div className="flex">
+        <div className="px-2 ">{index + 1}.</div>
+        <div >
+          <li key={index}>
+            {datas}
+
+            <img
+              src="delete.png"
+              alt="delete ing"
+              className="h-6 float-right px-2 my-1 "
+              onClick={() => removesingleuser(index)}
+            />
+          </li>
+        </div>
       </div>
     );
   });

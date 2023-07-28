@@ -13,9 +13,8 @@ const UserTable = () => {
   };
   return (
     <div>
-      <center>
         <button
-          className="btn px-6 py-2.5 bg-green-500 hover:bg-green-600 text-white rounded-[8px]"
+          className="btn px-6 m-5 py-2.5 bg-green-500 hover:bg-green-600 text-white rounded-[8px]"
           onClick={() => {
             addNewUser(fakeUserData());
           }}
@@ -27,7 +26,6 @@ const UserTable = () => {
         </ul><br />
         <hr />
         <DelateAllUser />
-      </center>
     </div>
   );
 };
